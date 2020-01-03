@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the array values after the split.</p>
+
+<button onclick="repeateMyFunction(myFunction, 1000)">Try it</button>
+
+clearInterval
+<button onclick="clearInterval(id)">stopIT</button>
+
+<p id="demo"></p>
+
+<script>
+
+
+function myFunction() {
+  var random = Math.floor((Math.random() * 3) + 0);
+  var templates = ["{{noun}} is   {{verb}} football", "{{noun}}  was {{verb}}  games", "{{noun}} will {{verb}} playstaion"];
+  
+   var str = "{{noun}} is {{verb}} football"; 
+   var n =  str.search("{{noun}}");
+   var y =  str.search("{{verb}}");
+   var res = str.split(" ");
+   var list = [];   
+    
+    var str = templates[random];
+    var myis = str.slice(8, 13)
+ 
+   
+  
+   
+   if (n != -1) {
+   list.push("Ahmed");  
+  
+   list.push(myis);
+   } 
+   if(y != -1) {
+   list.push("playing");
+   
+   }
+  var res = str.slice(22, 34);
+  var tryit =  list.join(" ") + res; 
+ document.getElementById("demo").innerHTML = tryit + ": typeof     is "  + typeof(tryit);
+ 
+ 
+ }
+
+//@param interval:Number -- The unit of `interval` is milliseconds
+function repeateMyFunction(func, interval) {
+  var taskID = setInterval(func, interval);
+  return taskID;
+}
+
+// Use repeateMyFunction
+// It will call `myFunction` once per second
+var taskID = repeateMyFunction(myFunction, 1000);
+
+// stop calling loop
+clearInterval(taskID);
+</script>
+
+</body>
+</html>
