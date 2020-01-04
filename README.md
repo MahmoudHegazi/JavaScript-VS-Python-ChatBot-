@@ -4,5 +4,4 @@
 
 
 
-<img src="image2.JPG "alt="Python Version">
-<img src="image1.JPG "alt="JavaScript Version">
+<imge src="image2.JPG "alt="Python Version">
